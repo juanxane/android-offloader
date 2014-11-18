@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         
+               <command
+               commandId="offloaderapps.handler.projecthandler"
+               label="Offload Project"
+               style="push">
+               <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <adapt
+                           type="org.eclipse.jdt.core.IJavaProject">
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+            
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="offloaderapps.handler.ProjectHandler"
+            id="offloaderapps.handler.projecthandler"
+            name="ProjectHandler">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="ar.edu.unicen.ccm.ui.CCMPreferencePage"
+            id="ar.edu.unicen.ccm.ui.CCMPreferencePage"
+            name="CCM4J Settings">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+   </extension>
+
+</plugin>
