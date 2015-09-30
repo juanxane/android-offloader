@@ -12,8 +12,6 @@ public class Fibonnacci {
 				return va;
 			}
 		}
-		//La siguiente linea es basura
-		int js = 12;
 		return 0;
 	}
 	
