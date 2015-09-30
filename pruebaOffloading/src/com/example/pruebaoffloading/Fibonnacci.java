@@ -2,6 +2,7 @@ package com.example.pruebaoffloading;
 
 public class Fibonnacci {
 
+	//SE agrega un comentario para probar git desde consola
 	public int calcular(int n){
 		if (n>=0){
 			if (n==0 || n==1)
@@ -11,6 +12,8 @@ public class Fibonnacci {
 				return va;
 			}
 		}
+		//La siguiente linea es basura
+		int js = 12;
 		return 0;
 	}
 	
